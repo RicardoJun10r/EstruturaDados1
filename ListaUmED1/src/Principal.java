@@ -5,6 +5,7 @@ import QuestaoVinteQuatro.QuestaoVinteQuatroResposta;
 import QuestaoVinteSeis.QuestaoVinteSeisResposta;
 import QuestaoVinteSete.QuestaoVinteSeteResposta;
 import QuestaoVinteTres.QuestaoVinteTresResposta;
+import util.Pessoa;
 
 import java.util.Scanner;
 
@@ -15,17 +16,19 @@ import QuestaoDezessete.QuestaoDezesseteResposta;
 import QuestaoDezoito.QuestaoDezoitoResposta;
 import QuestaoDois.QuestaoDoisResposta;
 import QuestaoOnze.QuestaoOnzeResposta;
+import QuestaoQuarenta.QuestaoQuarentaResposta;
 import QuestaoQuatro.QuestaoQuatroResposta;
 import QuestaoSeis.QuestaoSeisResposta;
 import QuestaoSete.QuestaoSeteResposta;
 import QuestaoTres.QuestaoTresResposta;
 import QuestaoTrinta.QuestaoTrintaResposta;
+import QuestaoTrintaNove.QuestaoTrintaNoveResposta;
+import QuestaoTrintaOito.QuestaoTrintaOitoResposta;
 import QuestaoTrintaUm.QuestaoTrintaUmResposta;
 
 public class Principal {
-
     private static Scanner scaner = new Scanner( System.in );
     public static void main(String[] args) {
-        QuestaoTrintaUmResposta questaoTrintaUmResposta = new QuestaoTrintaUmResposta();
+ 
     }
 }
