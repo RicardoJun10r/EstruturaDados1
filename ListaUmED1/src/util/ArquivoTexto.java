@@ -21,7 +21,6 @@ public class ArquivoTexto {
     public String leitor(String path) throws IOException 
 	{
 		BufferedReader bufferedReader = new BufferedReader( new FileReader(path) );
-		
 		StringBuffer sbResult = new StringBuffer();
 		String linha = "";
 		
