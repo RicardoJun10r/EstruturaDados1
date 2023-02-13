@@ -7,6 +7,7 @@ public class QuestaoVinteNoveResposta {
     private Random random;
     private int[]vetor;
     private int[]vetorRodado;
+    
     public QuestaoVinteNoveResposta(int tamanho)
     {
         this.vetor = new int[tamanho];
