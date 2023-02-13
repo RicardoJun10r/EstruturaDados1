@@ -11,10 +11,9 @@ public class QuestaoTrintaSeisReposta {
     {
         if(numero == 0)
         {
-            return numero = 1;
-        }
-        else
-        {
+            return 1;
+        } 
+        else {
             return numero*fatorial(numero-1);
         }
     }
