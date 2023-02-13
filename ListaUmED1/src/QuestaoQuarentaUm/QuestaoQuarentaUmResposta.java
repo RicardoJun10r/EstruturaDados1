@@ -20,7 +20,11 @@ public class QuestaoQuarentaUmResposta {
     
     public QuestaoQuarentaUmResposta()
     {
-
+        this.collectionList();
+        this.collectionSet();
+        this.collectionQueue();
+        this.collectionDeque();
+        this.collectionMap();
     }
 
     private void collectionList()
