@@ -53,15 +53,6 @@ public class Principal {
 
         // Para ver a resposta, basta descomentar e incializar o objeto de acordo com o que a questão pede.
 
-        // QuestaoTrintaTresResposta questaoTrintaTresResposta = new QuestaoTrintaTresResposta(null);
-        // QuestaoTrintaQuatroResposta questaoTrintaQuatroResposta = new QuestaoTrintaQuatroResposta(null);
-        // QuestaoTrintaCincoResposta questaoTrintaCincoResposta = new QuestaoTrintaCincoResposta(null);
-        // QuestaoTrintaSeisReposta questaoTrintaSeisReposta = new QuestaoTrintaSeisReposta(0);
-        // QuestaoTrintaSeteResposta questaoTrintaSeteResposta = new QuestaoTrintaSeteResposta(0, 0);
-        // QuestaoTrintaOitoResposta questaoTrintaOitoResposta = new QuestaoTrintaOitoResposta(null);
-        // QuestaoTrintaNoveResposta questaoTrintaNoveResposta = new QuestaoTrintaNoveResposta();
-        // QuestaoQuarentaResposta questaoQuarentaResposta = new QuestaoQuarentaResposta(null);
-        // QuestaoQuarentaUmResposta questaoQuarentaUmResposta = new QuestaoQuarentaUmResposta();
         int opcao;
         do {
             for(int i = 1; i <= 41; i++)
@@ -77,7 +68,7 @@ public class Principal {
         scaner.close();
     }
 
-    private static void menu(int opcao){
+    private static void menu(int opcao) throws IOException{
         switch (opcao) {
             case 0:
                 System.out.println("Saindo!!!");
@@ -314,33 +305,59 @@ public class Principal {
                 QuestaoTrintaDoisResposta questaoTrintaDoisResposta = new QuestaoTrintaDoisResposta();
                 break;
             case 33:
-                
+                String palavra;
+                System.out.println("Digite uma palavra:");
+                palavra = scaner.next();
+                QuestaoTrintaTresResposta questaoTrintaTresResposta = new QuestaoTrintaTresResposta(palavra);
                 break;
             case 34:
-                
+                String sentenca;
+                System.out.println("Digite uma frase:");
+                sentenca = scaner.nextLine();
+                QuestaoTrintaQuatroResposta questaoTrintaQuatroResposta = new QuestaoTrintaQuatroResposta(sentenca);
                 break;
             case 35:
-                
+                String frase_dois;
+                System.out.println("Digite uma frase:");
+                frase_dois = scaner.nextLine();
+                QuestaoTrintaCincoResposta questaoTrintaCincoResposta = new QuestaoTrintaCincoResposta(frase_dois);
                 break;
             case 36:
-                
+                int fatorialRecursivo;
+                System.out.println("Digite um numero:");
+                fatorialRecursivo = scaner.nextInt(); 
+                QuestaoTrintaSeisReposta questaoTrintaSeisReposta = new QuestaoTrintaSeisReposta(fatorialRecursivo);
                 break;
             case 37:
-                
+                System.out.println("Digite um numero:");
+                primeiroElemento = scaner.nextInt();
+                System.out.println("Digite outro numero:");
+                ultimoElemento = scaner.nextInt();
+                QuestaoTrintaSeteResposta questaoTrintaSeteResposta = new QuestaoTrintaSeteResposta(primeiroElemento, ultimoElemento);
                 break;
             case 38:
-                
+                System.out.println("Tamanho do vetor:");
+                tamanhoVetor = scaner.nextInt();
+                Integer[] vetorInteger = new Integer[tamanhoVetor];
+                System.out.println("Inicialize o vetor:");
+                for(int i = 0; i < vetorInteger.length; i++)
+                {
+                    vetorInteger[i] = scaner.nextInt();
+                }
+                QuestaoTrintaOitoResposta questaoTrintaOitoResposta = new QuestaoTrintaOitoResposta(vetorInteger);
                 break;
             case 39:
-                
+                QuestaoTrintaNoveResposta questaoTrintaNoveResposta = new QuestaoTrintaNoveResposta();
                 break;
             case 40:
-                
+                String zenitPolar;
+                System.out.println("Escreva uma frase:");
+                zenitPolar = scaner.nextLine();
+                QuestaoQuarentaResposta questaoQuarentaResposta = new QuestaoQuarentaResposta(zenitPolar);
                 break;
             case 41:
-                
+                QuestaoQuarentaUmResposta questaoQuarentaUmResposta = new QuestaoQuarentaUmResposta();
                 break;
-        
             default:
                 System.out.println("Questão inexistente!!!");
                 break;

@@ -1,5 +1,6 @@
 package util;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -10,42 +11,30 @@ import java.util.List;
 
 public class ArquivoBinario {
     
-    private final String PATH = "../temp/pessoas.dat";
+    public ArquivoBinario(){}
 
-    public void save(List<Object> objetos)
-    {
-        try {
-            ObjectOutputStream file = new ObjectOutputStream(new FileOutputStream(this.PATH));
-            for(Object i : objetos)
-            {
-                file.writeObject(i);
-            }
-            file.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+    public void save(List<Object> objetos, String path) throws IOException {
+        File file = new File(path);
+        file.delete();
+        file.createNewFile();
+
+        ObjectOutputStream objOutput = new ObjectOutputStream(new FileOutputStream(file));
+        objOutput.writeObject(objetos);
+        objOutput.close();
     }
 
-    public List<Object> load()
-    {
-        List<Object> objetos = new ArrayList<>();
-        try {
-            Object i = null;
-            ObjectInputStream file = new ObjectInputStream(new FileInputStream(this.PATH));
-            do {
-                i = (Object) file.readObject();
-                if(i != null)
-                {
-                    objetos.add(i);
-                }
-            } while (i != null);
-            file.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        } catch(ClassNotFoundException e)
+    @SuppressWarnings("unchecked")
+    public List<Object> load(String path) throws IOException, ClassNotFoundException {
+        List<Object> lista = new ArrayList<>();
+
+        File file = new File(path);
+
+        if(file.exists())
         {
-            System.out.println(e.getMessage());
+            ObjectInputStream objInput = new ObjectInputStream(new FileInputStream(file));
+            lista = (ArrayList<Object>) objInput.readObject();
+            objInput.close();
         }
-        return objetos;
+        return lista;
     }
 }
