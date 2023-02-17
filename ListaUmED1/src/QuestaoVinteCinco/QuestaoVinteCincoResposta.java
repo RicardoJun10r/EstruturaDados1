@@ -12,7 +12,7 @@ public class QuestaoVinteCincoResposta {
     {
         int tamanho;
         
-        System.out.println("Tamanho:");
+        System.out.println("Tamanho do vetor:");
         tamanho = this.scanner.nextInt();
         this.vetor = new int[tamanho];
 

@@ -3,6 +3,7 @@ package QuestaoVinteSete;
 public class QuestaoVinteSeteResposta {
 
     private int[] vetorNormal;
+    
     private int[] vetorInverso;
 
     public QuestaoVinteSeteResposta(int tamanho)

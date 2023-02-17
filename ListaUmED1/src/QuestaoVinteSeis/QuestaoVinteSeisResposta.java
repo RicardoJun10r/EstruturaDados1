@@ -3,7 +3,9 @@ package QuestaoVinteSeis;
 public class QuestaoVinteSeisResposta {
 
     private final int LINHAS = 5;
+
     private final int COLUNAS = 5;
+    
     private int [][] matriz = new int[this.LINHAS][this.COLUNAS];
     
     public QuestaoVinteSeisResposta()

@@ -12,6 +12,7 @@ public class QuestaoDezoitoResposta {
     {
         this.loginWhile();
         this.loginDoWhile();
+        this.scanner.close();
     }
 
     private void loginWhile()

@@ -2,7 +2,6 @@ package QuestaoVinteNoveAtualizada;
 
 public class QuestaoVinteNoveRespostaAtualizada
 {
-	
 	private int[]vetorRodado;
 
 	public QuestaoVinteNoveRespostaAtualizada(int[]vetor, int posicao)
