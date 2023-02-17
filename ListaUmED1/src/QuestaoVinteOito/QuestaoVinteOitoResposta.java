@@ -8,13 +8,13 @@ public class QuestaoVinteOitoResposta {
 
     private int[] vetor;
 
-    public QuestaoVinteOitoResposta(int TAMANHO)
+    public QuestaoVinteOitoResposta(int tamanho)
     {
-        this.vetor = new int[TAMANHO];
+        this.vetor = new int[tamanho];
         this.iniciarVetor(this.vetor);
-        this.escreverBarra(TAMANHO);
+        this.escreverBarra(tamanho);
         this.mostrar();
-        this.escreverBarra(TAMANHO);
+        this.escreverBarra(tamanho);
         System.out.println("Maior: " + this.maiorNumero(this.vetor));
     }
 

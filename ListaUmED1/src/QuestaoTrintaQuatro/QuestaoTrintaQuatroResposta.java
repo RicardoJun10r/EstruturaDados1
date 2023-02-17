@@ -5,9 +5,11 @@ import java.util.Set;
 
 public class QuestaoTrintaQuatroResposta
 {
+	private String resultado;
+
 	public QuestaoTrintaQuatroResposta(String frase)
 	{
-
+		this.resultado = "";
 		Set<String> hashSet = new HashSet<>();
 		String[] palavra = frase.split(" ");
 		int cont;
@@ -32,7 +34,13 @@ public class QuestaoTrintaQuatroResposta
 					cont++;
 				}
 			}
+			resultado += contarPalavra[i] + " = " + cont + " ";
 			System.out.println(contarPalavra[i] + " = " + cont);
 		}
+	}
+
+	public String getResultado()
+	{
+		return this.resultado;
 	}
 }

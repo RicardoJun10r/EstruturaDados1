@@ -1,11 +1,11 @@
 package QuestaoVinteNoveAtualizada;
 
-public class QuestaoVinteNoveResposta
+public class QuestaoVinteNoveRespostaAtualizada
 {
 	
 	private int[]vetorRodado;
 
-	public QuestaoVinteNoveResposta(int[]vetor, int posicao)
+	public QuestaoVinteNoveRespostaAtualizada(int[]vetor, int posicao)
 	{
 		this.vetorRodado = new int[vetor.length];
 		this.mostrar(vetor);
