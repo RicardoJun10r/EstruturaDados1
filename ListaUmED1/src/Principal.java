@@ -24,12 +24,12 @@ import QuestaoTres.QuestaoTresResposta;
 import QuestaoTrinta.QuestaoTrintaResposta;
 import QuestaoTrintaNove.QuestaoTrintaNoveResposta;
 import QuestaoTrintaOito.QuestaoTrintaOitoResposta;
+import QuestaoTrintaQuatro.QuestaoTrintaQuatroResposta;
 import QuestaoTrintaSeis.QuestaoTrintaSeisReposta;
 import QuestaoTrintaUm.QuestaoTrintaUmResposta;
 
 public class Principal {
     private static Scanner scaner = new Scanner( System.in );
     public static void main(String[] args) {
-
     }
 }

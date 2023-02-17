@@ -1,30 +1,38 @@
 package QuestaoTrintaQuatro;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class QuestaoTrintaQuatroResposta
 {
 	public QuestaoTrintaQuatroResposta(String frase)
 	{
-		String jaSaiu = "";
+
+		Set<String> hashSet = new HashSet<>();
 		String[] palavra = frase.split(" ");
-		int cont = 0;
+		int cont;
 		
-		for(int i = 0; i < frase.length(); i++)
+		for(int i = 0; i < palavra.length; i++){
+			hashSet.add(palavra[i]);
+		}
+
+		String[] contarPalavra = new String[hashSet.size()];
+
+		int k = 0;
+		for(String ele : hashSet)
+			contarPalavra[k++] = ele;
+
+		for(int i = 0; i < contarPalavra.length; i++)
 		{
-			if(jaSaiu.indexOf(palavra[i]) == -1)
+			cont = 0;
+			for(int j = 0; j < palavra.length; j++)
 			{
-				for(int j = 0; j < frase.length(); j++)
+				if(contarPalavra[i].equals(palavra[j]))
 				{
-					if(palavra[i] == palavra[j])
-					{
-						cont++;
-					}
+					cont++;
 				}
 			}
-			if(cont != 0)
-			{
-				System.out.println(palavra[i] + " = " + cont);
-			}
-			jaSaiu += palavra[i];
+			System.out.println(contarPalavra[i] + " = " + cont);
 		}
 	}
 }
