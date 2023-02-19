@@ -1,2 +1,2 @@
 # EstruturaDados1
-Resposta da lista de questões da materia de estrutura de dados
+Respostas das 41 questões da lista de questões da matéria de estrutura de dados 1
