@@ -58,13 +58,13 @@ public class Principal {
 
         // Para utilizar basta escrever o número da questão e responder do que se pede para ver a resolução da questão
 
-        // Algumas questões exigem PATH para escrever arquivos binários e de texto, se a questão der errado, configure o PATH de maneira correta, colocando todo o caminho até a pasta de resolução deste projeto
+        // Algumas questões exigem PATH para escrever arquivos binários e de texto, se a questão der errado, configure o PATH de maneira correta, colocando todo o caminho até a pasta ( temp ) deste projeto
         
-        // Se alguma questão der erro, comente o ( do-while ) e estancie a questão fora deste loop
+        // Se alguma questão der erro, comente o ( do-while ) e estancie a questão fora do loop
 
         // Para números double ou float UTILIZE A  (VÍRGULA )
 
-        // PARA CONFIGURAR O PATH COPIE E COLE O CAMINHO DA SUA MÁQUINA ATÉ A PASTA  ( TEMP ) DESTE PROJETO
+        // PARA CONFIGURAR O PATH COPIE E COLE O CAMINHO DA SUA MÁQUINA ATÉ A PASTA  ( TEMP ) DESTE PROJETO NA VARIÁVEL ( PATH )
         // EXEMPLO
         // $HOME/ListaED1/src/temp
 
