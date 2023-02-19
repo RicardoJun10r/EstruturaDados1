@@ -10,7 +10,6 @@ import QuestaoVinteSeis.QuestaoVinteSeisResposta;
 import QuestaoVinteSete.QuestaoVinteSeteResposta;
 import QuestaoVinteTres.QuestaoVinteTresResposta;
 import QuestaoVinteUm.QuestaoVinteUmResposta;
-import util.Pessoa;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -51,8 +50,9 @@ public class Principal {
     private static Scanner scaner = new Scanner( System.in );
     public static void main(String[] args) throws IOException {
 
-        // Para ver a resposta, basta descomentar e incializar o objeto de acordo com o que a questão pede.
-
+        // Para utilizar basta escrever o número da questão e responder do que se pede para ver a resolução da questão
+        // Algumas questões exigem PATH para escrever arquivos binários e de texto, se a questão der errado, configure o PATH de maneira correta, colocando todo o caminho até a pasta de resolução deste projeto
+        
         int opcao;
         do {
             for(int i = 1; i <= 41; i++)
@@ -60,10 +60,11 @@ public class Principal {
                 System.out.print(i + " ");
             }
             System.out.println();
-            System.out.println("Qual questão quer ver ?");
+            System.out.println("Qual questão quer ver ? [0] - Para sair");
             opcao = scaner.nextInt();
             menu(opcao);
             System.out.println();
+            scaner.nextLine();
         } while (opcao != 0);
         scaner.close();
     }
@@ -88,19 +89,20 @@ public class Principal {
                 System.out.println("Altura:");
                 altura = scaner.nextDouble();
                 System.out.println("Letra:");
-                letra = scaner.nextLine().charAt(0);
+                letra = scaner.next().charAt(0);
                 QuestaoDoisResposta questaoDoisResposta = new QuestaoDoisResposta(idade, altura, letra, nome);
+                System.out.println(questaoDoisResposta.toString());
                 break;
             case 3:
-                int numeroUm, numeroDois;
+                int numero1, numero2;
                 System.out.println("Digite um número:");
-                numeroUm = scaner.nextInt();
+                numero1 = scaner.nextInt();
                 System.out.println("Digite outro número:");
-                numeroDois = scaner.nextInt();
-                QuestaoTresResposta questaoTresResposta = new QuestaoTresResposta(numeroUm, numeroDois);
+                numero2 = scaner.nextInt();
+                QuestaoTresResposta questaoTresResposta = new QuestaoTresResposta(numero1, numero2);
                 break;
             case 4:
-                int numero1, numero2, numero3;
+                int numero3;
                 System.out.println("Digite o primeiro número:");
                 numero1 = scaner.nextInt();
                 System.out.println("Digite o segundo número:");
@@ -130,71 +132,63 @@ public class Principal {
                 QuestaoSeisResposta questaoSeisResposta = new QuestaoSeisResposta(pessoas, refrigerante, pizzas);
                 break;
             case 7:
-                double primeiroNumero, segundoNumero;
                 System.out.println("Digite o primeiro número:");
-                primeiroNumero = scaner.nextDouble();
+                numero_1 = scaner.nextDouble();
                 System.out.println("Digite o segundo número:");
-                segundoNumero = scaner.nextDouble();
-                QuestaoSeteResposta questaoSeteResposta = new QuestaoSeteResposta(primeiroNumero, segundoNumero);
+                numero_2 = scaner.nextDouble();
+                QuestaoSeteResposta questaoSeteResposta = new QuestaoSeteResposta(numero_1, numero_2);
                 break;
             case 8:
-                double alturaImc, pesoImc;
                 System.out.println("Digite a altura:");
-                alturaImc = scaner.nextDouble();
+                numero_1 = scaner.nextDouble();
                 System.out.println("Digite o peso:");
-                pesoImc = scaner.nextDouble();
-                QuestaoOitoResposta questaoOitoResposta = new QuestaoOitoResposta(pesoImc, alturaImc);
+                numero_2 = scaner.nextDouble();
+                QuestaoOitoResposta questaoOitoResposta = new QuestaoOitoResposta(numero_2, numero_1);
                 break;
             case 9:
-                double raio;
                 System.out.println("Digite o raio da circunferência:");
-                raio = scaner.nextDouble();
-                QuestaoNoveResposta questaoNoveResposta = new QuestaoNoveResposta(raio);
+                numero_1 = scaner.nextDouble();
+                QuestaoNoveResposta questaoNoveResposta = new QuestaoNoveResposta(numero_1);
                 break;
             case 10:
-                int par_impar;
                 System.out.println("Digite um número:");
-                par_impar = scaner.nextInt();
-                QuestaoDezResposta questaoDezResposta = new QuestaoDezResposta(par_impar);
+                numero1 = scaner.nextInt();
+                QuestaoDezResposta questaoDezResposta = new QuestaoDezResposta(numero1);
                 break;
             case 11:
                 QuestaoOnzeResposta  questaoOnzeResposta = new QuestaoOnzeResposta();
                 break;
             case 12:
-                double nota1, nota2, nota3;
                 System.out.println("Digite a primeira nota:");
-                nota1 = scaner.nextDouble();
+                numero_1 = scaner.nextDouble();
                 System.out.println("Digite o segunda nota:");
-                nota2 = scaner.nextDouble();
+                numero_2 = scaner.nextDouble();
                 System.out.println("Digite o terceira nota:");
-                nota3 = scaner.nextDouble();
-                QuestaoDozeResposta questaoDozeResposta = new QuestaoDozeResposta(nota1, nota2, nota3);
+                numero_3 = scaner.nextDouble();
+                QuestaoDozeResposta questaoDozeResposta = new QuestaoDozeResposta(numero_1, numero_2, numero_3);
                 break;
             case 13:
-                double prova1, prova2, prova3;
                 System.out.println("Digite a primeira nota:");
-                prova1 = scaner.nextDouble();
+                numero_1 = scaner.nextDouble();
                 System.out.println("Digite o segunda nota:");
-                prova2 = scaner.nextDouble();
+                numero_2 = scaner.nextDouble();
                 System.out.println("Digite o terceira nota:");
-                prova3 = scaner.nextDouble();
-                QuestaoTrezeResposta questaoTrezeResposta = new QuestaoTrezeResposta(prova1, prova2, prova3);
+                numero_3 = scaner.nextDouble();
+                QuestaoTrezeResposta questaoTrezeResposta = new QuestaoTrezeResposta(numero_1, numero_2, numero_3);
                 break;
             case 14:
-                int a, b, c;
                 System.out.println("Digite o valor de a:");
-                a = scaner.nextInt();
+                numero1 = scaner.nextInt();
                 System.out.println("Digite o valor de b:");
-                b = scaner.nextInt();
+                numero2 = scaner.nextInt();
                 System.out.println("Digite o valor de c:");
-                c = scaner.nextInt();
-                QuestaoQuatorzeResposta questaoQuatorzeResposta = new QuestaoQuatorzeResposta(a, b, c);
+                numero3 = scaner.nextInt();
+                QuestaoQuatorzeResposta questaoQuatorzeResposta = new QuestaoQuatorzeResposta(numero1, numero2, numero3);
                 break;
             case 15:
-                int numero;
                 System.out.println("Digite um numero:");
-                numero = scaner.nextInt();
-                QuestaoQuinzeResposta questaoQuinzeResposta = new QuestaoQuinzeResposta(numero);
+                numero1 = scaner.nextInt();
+                QuestaoQuinzeResposta questaoQuinzeResposta = new QuestaoQuinzeResposta(numero1);
                 break;
             case 16:
                 int comeco, fim;
@@ -205,21 +199,19 @@ public class Principal {
                 QuestaoDezesseisResposta questaoDezesseisResposta = new QuestaoDezesseisResposta(comeco, fim);
                 break;
             case 17:
-                int inicio, limite;
                 System.out.println("Digite um numero:");
-                inicio = scaner.nextInt();
+                comeco = scaner.nextInt();
                 System.out.println("Digite outro numero:");
-                limite = scaner.nextInt();
-                QuestaoDezesseteResposta questaoDezesseteResposta = new QuestaoDezesseteResposta(inicio, limite);
+                fim = scaner.nextInt();
+                QuestaoDezesseteResposta questaoDezesseteResposta = new QuestaoDezesseteResposta(comeco, fim);
                 break;
             case 18:
                 QuestaoDezoitoResposta questaoDezoitoResposta = new QuestaoDezoitoResposta();
                 break;
             case 19:
-                int tabuada;
                 System.out.println("Digite um numero:");
-                tabuada = scaner.nextInt();
-                QuestaoDezenoveResposta questaoDezenoveResposta = new QuestaoDezenoveResposta(tabuada);
+                numero1 = scaner.nextInt();
+                QuestaoDezenoveResposta questaoDezenoveResposta = new QuestaoDezenoveResposta(numero1);
                 break;
             case 20:
                 double investimentoInicial, investimentoMensal, taxaJuros;
@@ -235,24 +227,21 @@ public class Principal {
                 QuestaoVinteResposta questaoVinteResposta = new QuestaoVinteResposta(investimentoInicial, investimentoMensal, meses, taxaJuros);
                 break;
             case 21:
-                int primo;
                 System.out.println("Digite um número:");
-                primo = scaner.nextInt();
-                QuestaoVinteUmResposta questaoVinteUmResposta = new QuestaoVinteUmResposta(primo);
+                numero1 = scaner.nextInt();
+                QuestaoVinteUmResposta questaoVinteUmResposta = new QuestaoVinteUmResposta(numero1);
                 break;
             case 22:
-                int primeiroElemento, ultimoElemento;
                 System.out.println("Digite um numero:");
-                primeiroElemento = scaner.nextInt();
+                comeco = scaner.nextInt();
                 System.out.println("Digite outro numero:");
-                ultimoElemento = scaner.nextInt();
-                QuestaoVinteDoisResposta questaoVinteDoisResposta = new QuestaoVinteDoisResposta(primeiroElemento, ultimoElemento);
+                fim = scaner.nextInt();
+                QuestaoVinteDoisResposta questaoVinteDoisResposta = new QuestaoVinteDoisResposta(comeco, fim);
                 break;
             case 23:
-                int fatorial;
                 System.out.println("Digite um número:");
-                fatorial = scaner.nextInt();
-                QuestaoVinteTresResposta questaoVinteTresResposta = new QuestaoVinteTresResposta(fatorial);
+                numero1 = scaner.nextInt();
+                QuestaoVinteTresResposta questaoVinteTresResposta = new QuestaoVinteTresResposta(numero1);
                 break;
             case 24:
                 QuestaoVinteQuatroResposta questaoVinteQuatroResposta = new QuestaoVinteQuatroResposta();
@@ -270,27 +259,25 @@ public class Principal {
                 QuestaoVinteSeteResposta questaoVinteSeteResposta = new QuestaoVinteSeteResposta(tamanho_vetor);
                 break;
             case 28:
-                int tamanho;
                 System.out.println("Tamanho do vetor:");
-                tamanho = scaner.nextInt();
-                QuestaoVinteOitoResposta questaoVinteOitoResposta = new QuestaoVinteOitoResposta(tamanho);
+                tamanho_vetor = scaner.nextInt();
+                QuestaoVinteOitoResposta questaoVinteOitoResposta = new QuestaoVinteOitoResposta(tamanho_vetor);
                 break;
             case 29:
-                int tamanhoVetor, posicao;
                 int[]vetor = new int[5];
                 System.out.println("Tamanho do vetor:");
-                tamanhoVetor = scaner.nextInt();
+                tamanho_vetor = scaner.nextInt();
                 System.out.println("--Questão vinte nove normal--");
-                QuestaoVinteNoveResposta questaoVinteNoveResposta = new QuestaoVinteNoveResposta(tamanhoVetor);
+                QuestaoVinteNoveResposta questaoVinteNoveResposta = new QuestaoVinteNoveResposta(tamanho_vetor);
                 System.out.println("--Questão vinte nove normal ATUALIZADA--");
                 System.out.println("Posicao no vetor:");
-                posicao = scaner.nextInt();
+                numero1 = scaner.nextInt();
                 System.out.println("Inicialize o vetor:");
                 for(int i = 0; i < vetor.length; i++)
                 {
                     vetor[i] = scaner.nextInt();
                 }
-                QuestaoVinteNoveRespostaAtualizada questaoVinteNoveRespostaAtualizada = new QuestaoVinteNoveRespostaAtualizada(vetor, posicao);
+                QuestaoVinteNoveRespostaAtualizada questaoVinteNoveRespostaAtualizada = new QuestaoVinteNoveRespostaAtualizada(vetor, numero1);
                 break;
             case 30:
                 String frase;
@@ -311,34 +298,31 @@ public class Principal {
                 QuestaoTrintaTresResposta questaoTrintaTresResposta = new QuestaoTrintaTresResposta(palavra);
                 break;
             case 34:
-                String sentenca;
                 System.out.println("Digite uma frase:");
-                sentenca = scaner.nextLine();
-                QuestaoTrintaQuatroResposta questaoTrintaQuatroResposta = new QuestaoTrintaQuatroResposta(sentenca);
+                frase = scaner.nextLine();
+                QuestaoTrintaQuatroResposta questaoTrintaQuatroResposta = new QuestaoTrintaQuatroResposta(frase);
                 break;
             case 35:
-                String frase_dois;
                 System.out.println("Digite uma frase:");
-                frase_dois = scaner.nextLine();
-                QuestaoTrintaCincoResposta questaoTrintaCincoResposta = new QuestaoTrintaCincoResposta(frase_dois);
+                frase = scaner.nextLine();
+                QuestaoTrintaCincoResposta questaoTrintaCincoResposta = new QuestaoTrintaCincoResposta(frase);
                 break;
             case 36:
-                int fatorialRecursivo;
                 System.out.println("Digite um numero:");
-                fatorialRecursivo = scaner.nextInt(); 
-                QuestaoTrintaSeisReposta questaoTrintaSeisReposta = new QuestaoTrintaSeisReposta(fatorialRecursivo);
+                numero1 = scaner.nextInt(); 
+                QuestaoTrintaSeisReposta questaoTrintaSeisReposta = new QuestaoTrintaSeisReposta(numero1);
                 break;
             case 37:
                 System.out.println("Digite um numero:");
-                primeiroElemento = scaner.nextInt();
+                comeco = scaner.nextInt();
                 System.out.println("Digite outro numero:");
-                ultimoElemento = scaner.nextInt();
-                QuestaoTrintaSeteResposta questaoTrintaSeteResposta = new QuestaoTrintaSeteResposta(primeiroElemento, ultimoElemento);
+                fim = scaner.nextInt();
+                QuestaoTrintaSeteResposta questaoTrintaSeteResposta = new QuestaoTrintaSeteResposta(comeco, fim);
                 break;
             case 38:
                 System.out.println("Tamanho do vetor:");
-                tamanhoVetor = scaner.nextInt();
-                Integer[] vetorInteger = new Integer[tamanhoVetor];
+                tamanho_vetor = scaner.nextInt();
+                Integer[] vetorInteger = new Integer[tamanho_vetor];
                 System.out.println("Inicialize o vetor:");
                 for(int i = 0; i < vetorInteger.length; i++)
                 {
@@ -350,10 +334,9 @@ public class Principal {
                 QuestaoTrintaNoveResposta questaoTrintaNoveResposta = new QuestaoTrintaNoveResposta();
                 break;
             case 40:
-                String zenitPolar;
                 System.out.println("Escreva uma frase:");
-                zenitPolar = scaner.nextLine();
-                QuestaoQuarentaResposta questaoQuarentaResposta = new QuestaoQuarentaResposta(zenitPolar);
+                frase = scaner.nextLine();
+                QuestaoQuarentaResposta questaoQuarentaResposta = new QuestaoQuarentaResposta(frase);
                 break;
             case 41:
                 QuestaoQuarentaUmResposta questaoQuarentaUmResposta = new QuestaoQuarentaUmResposta();

@@ -7,7 +7,7 @@ import util.ArquivoTexto;
 
 public class QuestaoTrintaCincoResposta {
 
-    private final String PATH = "$HOME/ListaUmED1/src/temp/questaoTrintaCinco.csv";
+    private final String PATH = "/ListaUmED1/src/temp/questaoTrintaCinco.csv";
     
     public QuestaoTrintaCincoResposta(String frase) throws IOException {
         QuestaoTrintaQuatroResposta questaoTrintaQuatroResposta = new QuestaoTrintaQuatroResposta(frase);

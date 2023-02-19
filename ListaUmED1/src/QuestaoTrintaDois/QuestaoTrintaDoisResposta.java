@@ -9,7 +9,7 @@ import util.Pessoa;
 
 public class QuestaoTrintaDoisResposta {
     
-    private final String PATH = "/home/ricardojunior/codigos/estruturaDados1/repository/EstruturaDados1/ListaUmED1/src/temp/questaoTrintaDois.dat";
+    private final String PATH = "/ListaUmED1/src/temp/questaoTrintaDois.dat";
 
     public QuestaoTrintaDoisResposta() throws IOException
     {

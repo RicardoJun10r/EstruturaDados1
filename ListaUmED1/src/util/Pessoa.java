@@ -28,7 +28,12 @@ public class Pessoa implements Serializable  {
         this.calcImc();
     }
 
-    private void calcImc()
+    public Pessoa()
+    {
+        
+    }
+
+    public void calcImc()
     {
         this.imc = this.peso/(this.altura*this.altura);
     }

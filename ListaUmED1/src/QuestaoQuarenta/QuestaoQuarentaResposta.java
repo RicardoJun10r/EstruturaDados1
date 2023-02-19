@@ -6,9 +6,9 @@ import util.ArquivoTexto;
 
 public class QuestaoQuarentaResposta {
     
-    private final String PATH_CRIPTOGRAFAR = "$HOME/ListaUmED1/src/temp/zenit.txt";
+    private final String PATH_CRIPTOGRAFAR = "/ListaUmED1/src/temp/zenit.txt";
    
-    private final String PATH_DESCRIPTOGRAFAR = "$HOME/ListaUmED1/src/temp/polar.txt";
+    private final String PATH_DESCRIPTOGRAFAR = "/ListaUmED1/src/temp/polar.txt";
 
     private ArquivoTexto arquivoTexto;
 
