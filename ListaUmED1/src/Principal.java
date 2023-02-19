@@ -47,6 +47,11 @@ import QuestaoTrintaSete.QuestaoTrintaSeteResposta;
 import QuestaoTrintaTres.QuestaoTrintaTresResposta;
 import QuestaoTrintaUm.QuestaoTrintaUmResposta;
 
+/**Classej principal das respostas das questões
+* @author Ricardo Cezar Fernandes de Melo Junior
+* @version 1.0.0
+*/
+
 public class Principal {
 
     private static Scanner scaner = new Scanner( System.in );
