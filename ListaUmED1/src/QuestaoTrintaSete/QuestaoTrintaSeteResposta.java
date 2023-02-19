@@ -10,7 +10,7 @@ public class QuestaoTrintaSeteResposta {
         System.out.println(this.estruturaRepeticao(inicio, fim));
         tempoFinal = System.currentTimeMillis();
         tempoExecucao = (tempoFinal-tempoInicial);
-        System.out.println(tempoExecucao);
+        System.out.println("Tmepo de execução" + tempoExecucao);
         tempoInicial = 0L;
         tempoFinal = 0L;
         System.out.println("==================================");
@@ -18,7 +18,7 @@ public class QuestaoTrintaSeteResposta {
         System.out.println(this.recursivo(inicio, fim));
         tempoFinal = System.currentTimeMillis();
         tempoExecucao = (tempoFinal-tempoInicial);
-        System.out.println(tempoExecucao);
+        System.out.println("Tmepo de execução" + tempoExecucao);
     }
 
     private int estruturaRepeticao(int inicio, int fim)

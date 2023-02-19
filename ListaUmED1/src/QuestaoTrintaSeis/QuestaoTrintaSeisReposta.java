@@ -4,7 +4,7 @@ public class QuestaoTrintaSeisReposta {
     
     public QuestaoTrintaSeisReposta(int numero)
     {
-        System.out.println(this.fatorial(numero));
+        System.out.println("Fatorial = " + this.fatorial(numero));
     }
 
     private int fatorial(int numero)

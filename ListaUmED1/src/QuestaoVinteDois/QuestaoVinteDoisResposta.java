@@ -9,7 +9,7 @@ public class QuestaoVinteDoisResposta {
         {
             contador += i;
         }
-        System.out.println(contador);
+        System.out.println("Somatório: " + contador);
     }
     
 }

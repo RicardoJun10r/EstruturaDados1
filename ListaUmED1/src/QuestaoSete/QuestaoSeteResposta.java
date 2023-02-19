@@ -9,6 +9,6 @@ public class QuestaoSeteResposta {
             System.out.println("ERRO!");
         }
 
-        System.out.println("Resposta: " + (numero1/numero2));   
+        System.out.println("Divisão: " + (numero1/numero2));   
     }
 }

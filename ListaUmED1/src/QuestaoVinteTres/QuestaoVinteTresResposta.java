@@ -9,7 +9,7 @@ public class QuestaoVinteTresResposta {
         {
             fatorial *= i;
         }
-        System.out.println(fatorial);
+        System.out.println("Fatorial: " + fatorial);
     }
 
 }

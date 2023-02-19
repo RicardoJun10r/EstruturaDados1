@@ -5,7 +5,10 @@ public class QuestaoDezenoveResposta {
     public QuestaoDezenoveResposta(int numero)
     {
         this.tabuada(numero);
-        this.tabuadaGigante();
+
+        // Desconmente o código abaixo para apresentar uma tabuada de 0 a 100
+        
+        // this.tabuadaGigante();
     }
 
     private void tabuada(int numero)

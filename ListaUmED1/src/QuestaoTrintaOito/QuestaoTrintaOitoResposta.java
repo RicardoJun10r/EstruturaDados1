@@ -4,11 +4,13 @@ public class QuestaoTrintaOitoResposta {
 
     public <T> QuestaoTrintaOitoResposta(T objeto)
     {
+        System.out.println("Imprimindo usando toString");
         this.usandoToString(objeto);
     }
 
     public <T> QuestaoTrintaOitoResposta(T[]vetor)
     {
+        System.out.println("Imprimindo objeto | vetor sem toString");
         this.imprimirVetor(vetor);
     }
 
