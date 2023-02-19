@@ -52,6 +52,8 @@ public class Principal {
     private static Scanner scaner = new Scanner( System.in );
 
     private static List<Integer> historicoQuestoes = new ArrayList<>();
+
+    private static String PATH;
     public static void main(String[] args) throws IOException {
 
         // Para utilizar basta escrever o número da questão e responder do que se pede para ver a resolução da questão
@@ -61,6 +63,11 @@ public class Principal {
         // Se alguma questão der erro, comente o ( do-while ) e estancie a questão fora deste loop
 
         // Para números double ou float UTILIZE A  (VÍRGULA )
+
+        System.out.println("Para iniciar é necessário configurar o PATH, pois algumas questões utiliza manipulação de arquivos");
+        System.out.println("Digite o PATH:");
+        PATH = scaner.next();
+        System.out.println("Configurado, agora pode inicializar!");
 
         int opcao;
         do {
@@ -339,6 +346,8 @@ public class Principal {
                 break;
             case 32:
                 QuestaoTrintaDoisResposta questaoTrintaDoisResposta = new QuestaoTrintaDoisResposta();
+                questaoTrintaDoisResposta.setPath(PATH);
+                questaoTrintaDoisResposta.executar();
                 historicoQuestoes.add(32);
                 break;
             case 33:
@@ -357,7 +366,9 @@ public class Principal {
             case 35:
                 System.out.println("Digite uma frase:");
                 frase = scaner.nextLine();
-                QuestaoTrintaCincoResposta questaoTrintaCincoResposta = new QuestaoTrintaCincoResposta(frase);
+                QuestaoTrintaCincoResposta questaoTrintaCincoResposta = new QuestaoTrintaCincoResposta();
+                questaoTrintaCincoResposta.setPath(PATH);
+                questaoTrintaCincoResposta.executar(frase);
                 historicoQuestoes.add(35);
                 break;
             case 36:
@@ -396,7 +407,10 @@ public class Principal {
             case 40:
                 System.out.println("Escreva uma frase:");
                 frase = scaner.nextLine();
-                QuestaoQuarentaResposta questaoQuarentaResposta = new QuestaoQuarentaResposta(frase);
+                QuestaoQuarentaResposta questaoQuarentaResposta = new QuestaoQuarentaResposta();
+                questaoQuarentaResposta.setPathCriptografar(PATH);
+                questaoQuarentaResposta.setPathDescriptografar(PATH);
+                questaoQuarentaResposta.executar(frase);
                 historicoQuestoes.add(40);
                 break;
             case 41:

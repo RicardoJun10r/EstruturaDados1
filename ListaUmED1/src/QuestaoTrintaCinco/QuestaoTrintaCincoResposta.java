@@ -7,14 +7,25 @@ import util.ArquivoTexto;
 
 public class QuestaoTrintaCincoResposta {
 
-    private final String PATH = "/ListaUmED1/src/temp/questaoTrintaCinco.csv";
+    private String PATH;
     
-    public QuestaoTrintaCincoResposta(String frase) throws IOException {
+    public QuestaoTrintaCincoResposta() throws IOException {
+        
+    }
+
+    public void executar(String frase) throws IOException{
         QuestaoTrintaQuatroResposta questaoTrintaQuatroResposta = new QuestaoTrintaQuatroResposta(frase);
         System.out.println("Escrevendo arquivo...");
         this.escreverArquivo(this.PATH, questaoTrintaQuatroResposta.getResultado());
         System.out.println("Lendo arquivo...");
         this.lerArquivo(this.PATH);
+    }
+
+    public void setPath(String path)
+    {
+        if(!path.isEmpty()){
+            this.PATH = path + "/questaoTrintaCinco.csv";
+        }
     }
 
     private void escreverArquivo(String path, String texto) throws IOException{

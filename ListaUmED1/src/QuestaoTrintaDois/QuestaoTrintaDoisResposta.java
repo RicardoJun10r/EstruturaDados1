@@ -9,13 +9,22 @@ import util.Pessoa;
 
 public class QuestaoTrintaDoisResposta {
     
-    private final String PATH = "/ListaUmED1/src/temp/questaoTrintaDois.dat";
+    private String PATH;
 
-    public QuestaoTrintaDoisResposta() throws IOException
+    public QuestaoTrintaDoisResposta(){}
+
+    public void executar() throws IOException
     {
         QuestaoTrintaUmResposta questaoTrintaUmResposta = new QuestaoTrintaUmResposta();
         questaoTrintaUmResposta.salvarLista(this.PATH);
         this.lerArquivo(this.PATH);
+    }
+
+    public void setPath(String path)
+    {
+        if(!path.isEmpty()){
+            this.PATH = path + "/questaoTrintaDois.dat";
+        }
     }
 
     private void lerArquivo(String path)

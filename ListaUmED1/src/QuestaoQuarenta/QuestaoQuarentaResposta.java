@@ -6,16 +6,17 @@ import util.ArquivoTexto;
 
 public class QuestaoQuarentaResposta {
     
-    private final String PATH_CRIPTOGRAFAR = "/ListaUmED1/src/temp/zenit.txt";
+    private String PATH_CRIPTOGRAFAR;
    
-    private final String PATH_DESCRIPTOGRAFAR = "/ListaUmED1/src/temp/polar.txt";
+    private String PATH_DESCRIPTOGRAFAR;
 
     private ArquivoTexto arquivoTexto;
 
     private String textoOutput = "";
 
-    public QuestaoQuarentaResposta(String frase)
-    {
+    public QuestaoQuarentaResposta(){}
+
+    public void executar(String frase) throws IOException{
         this.arquivoTexto = new ArquivoTexto();
 
         System.out.println("Criptografando...");
@@ -55,7 +56,18 @@ public class QuestaoQuarentaResposta {
 			System.out.println("Pane geral!");
 			e.printStackTrace();
 		}
+    }
 
+    public void setPathCriptografar(String path){
+        if(!path.isEmpty()){
+            this.PATH_CRIPTOGRAFAR = path + "/zenit.txt";
+        }
+    }
+
+    public void setPathDescriptografar(String path){
+        if(!path.isEmpty()){
+            this.PATH_DESCRIPTOGRAFAR = path + "/polar.txt";
+        }
     }
 
     private String criptografar(String texto)
