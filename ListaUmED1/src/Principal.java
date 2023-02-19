@@ -64,6 +64,10 @@ public class Principal {
 
         // Para números double ou float UTILIZE A  (VÍRGULA )
 
+        // PARA CONFIGURAR O PATH COPIE E COLE O CAMINHO DA SUA MÁQUINA ATÉ A PASTA  ( TEMP ) DESTE PROJETO
+        // EXEMPLO
+        // $HOME/ListaED1/src/temp
+
         System.out.println("Para iniciar é necessário configurar o PATH, pois algumas questões utiliza manipulação de arquivos");
         System.out.println("Digite o PATH:");
         PATH = scaner.next();
