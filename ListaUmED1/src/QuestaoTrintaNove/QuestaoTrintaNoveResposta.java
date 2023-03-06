@@ -104,7 +104,7 @@ public class QuestaoTrintaNoveResposta {
     private String create(Pessoa pessoa)
     {
         this.pessoas.add(pessoa);
-        return pessoa.toString() + " foi adicionada";
+        return " [ adicionado ]" + pessoa.toString();
     }
 
     private String read(String cpf)
@@ -126,7 +126,7 @@ public class QuestaoTrintaNoveResposta {
             if(this.pessoas.get(i).getCpf().equals(cpf))
             {
                 this.pessoas.set(i, pessoa);
-                return "atualizado";
+                return "[ atualizado ]" + pessoas.get(i).toString();
             }
         }
         return "\nnão encontrado!\n";
@@ -139,7 +139,7 @@ public class QuestaoTrintaNoveResposta {
             if(this.pessoas.get(i).getCpf().equals(cpf))
             {
                 this.pessoas.remove(i);
-                return "deletado";
+                return "[ deletado ]" + pessoas.get(i).toString();
             }
         }
         return "\nnão encontrado!\n";
