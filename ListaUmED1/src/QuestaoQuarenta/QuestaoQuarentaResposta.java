@@ -59,12 +59,21 @@ public class QuestaoQuarentaResposta {
     }
 
     public void setPathCriptografar(String path){
+        
+        if(path == null){
+            this.PATH_CRIPTOGRAFAR = "ListaUmED1/src/temp/zenit.txt";
+        }
+
         if(!path.isEmpty()){
             this.PATH_CRIPTOGRAFAR = path + "/zenit.txt";
         }
     }
 
     public void setPathDescriptografar(String path){
+        
+        if(path == null){
+            this.PATH_CRIPTOGRAFAR = "ListaUmED1/src/temp/polar.txt";
+        }
         if(!path.isEmpty()){
             this.PATH_DESCRIPTOGRAFAR = path + "/polar.txt";
         }

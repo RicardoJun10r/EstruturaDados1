@@ -74,7 +74,7 @@ public class Principal {
         // $HOME/ListaED1/src/temp
 
         System.out.println("Para iniciar é necessário configurar o PATH, pois algumas questões utiliza manipulação de arquivos");
-        System.out.println("Digite o PATH:");
+        System.out.println("Digite o PATH completo OU clique ENTER, assim usando o caminho relativo:");
         PATH = scaner.next();
         System.out.println("Configurado, agora pode inicializar!");
 

@@ -23,6 +23,10 @@ public class QuestaoTrintaCincoResposta {
 
     public void setPath(String path)
     {
+        if(path == null){
+            this.PATH = "ListaUmED1/src/temp/questaoTrintaCinco.csv";
+        }
+
         if(!path.isEmpty()){
             this.PATH = path + "/questaoTrintaCinco.csv";
         }

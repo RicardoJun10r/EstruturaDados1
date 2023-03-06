@@ -22,6 +22,9 @@ public class QuestaoTrintaDoisResposta {
 
     public void setPath(String path)
     {
+        if(PATH == null){
+            this.PATH = "ListaUmED1/src/temp/questaiTrintaDois.dat";
+        }
         if(!path.isEmpty()){
             this.PATH = path + "/questaoTrintaDois.dat";
         }
