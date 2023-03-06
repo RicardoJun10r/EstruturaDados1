@@ -66,7 +66,7 @@ public class Principal {
         
         // Se alguma questão der erro, comente o ( do-while ) e estancie a questão fora do loop
 
-        // Para números double ou float UTILIZE A  (VÍRGULA )
+        // Para números double ou float UTILIZE A  ( VÍRGULA )
 
         // PARA CONFIGURAR O PATH COPIE E COLE O CAMINHO DA SUA MÁQUINA ATÉ A PASTA  ( TEMP ) DESTE PROJETO NA VARIÁVEL ( PATH )
         // EXEMPLO
