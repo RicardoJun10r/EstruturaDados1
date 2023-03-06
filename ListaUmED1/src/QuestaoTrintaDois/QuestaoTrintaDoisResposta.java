@@ -11,23 +11,21 @@ public class QuestaoTrintaDoisResposta {
     
     private String PATH;
 
-    public QuestaoTrintaDoisResposta(){}
+    public QuestaoTrintaDoisResposta() throws IOException{
+        this.setPath();
+        this.executar();
+    }
 
-    public void executar() throws IOException
+    private void executar() throws IOException
     {
         QuestaoTrintaUmResposta questaoTrintaUmResposta = new QuestaoTrintaUmResposta();
         questaoTrintaUmResposta.salvarLista(this.PATH);
         this.lerArquivo(this.PATH);
     }
 
-    public void setPath(String path)
+    private void setPath()
     {
-        if(PATH == null){
-            this.PATH = "ListaUmED1/src/temp/questaiTrintaDois.dat";
-        }
-        if(!path.isEmpty()){
-            this.PATH = path + "/questaoTrintaDois.dat";
-        }
+        this.PATH = "ListaUmED1/src/temp/questaoTrintaDois.dat";
     }
 
     private void lerArquivo(String path)

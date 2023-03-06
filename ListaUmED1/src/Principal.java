@@ -73,11 +73,6 @@ public class Principal {
         // EXEMPLO
         // $HOME/ListaED1/src/temp
 
-        System.out.println("Para iniciar é necessário configurar o PATH, pois algumas questões utiliza manipulação de arquivos");
-        System.out.println("Digite o PATH completo OU clique ENTER, assim usando o caminho relativo:");
-        PATH = scaner.next();
-        System.out.println("Configurado, agora pode inicializar!");
-
         int opcao;
         do {
             for(int i = 1; i <= 41; i++)
@@ -355,8 +350,6 @@ public class Principal {
                 break;
             case 32:
                 QuestaoTrintaDoisResposta questaoTrintaDoisResposta = new QuestaoTrintaDoisResposta();
-                questaoTrintaDoisResposta.setPath(PATH);
-                questaoTrintaDoisResposta.executar();
                 historicoQuestoes.add(32);
                 break;
             case 33:
@@ -375,9 +368,7 @@ public class Principal {
             case 35:
                 System.out.println("Digite uma frase:");
                 frase = scaner.nextLine();
-                QuestaoTrintaCincoResposta questaoTrintaCincoResposta = new QuestaoTrintaCincoResposta();
-                questaoTrintaCincoResposta.setPath(PATH);
-                questaoTrintaCincoResposta.executar(frase);
+                QuestaoTrintaCincoResposta questaoTrintaCincoResposta = new QuestaoTrintaCincoResposta(frase);
                 historicoQuestoes.add(35);
                 break;
             case 36:
@@ -416,10 +407,7 @@ public class Principal {
             case 40:
                 System.out.println("Escreva uma frase:");
                 frase = scaner.nextLine();
-                QuestaoQuarentaResposta questaoQuarentaResposta = new QuestaoQuarentaResposta();
-                questaoQuarentaResposta.setPathCriptografar(PATH);
-                questaoQuarentaResposta.setPathDescriptografar(PATH);
-                questaoQuarentaResposta.executar(frase);
+                QuestaoQuarentaResposta questaoQuarentaResposta = new QuestaoQuarentaResposta(frase);
                 historicoQuestoes.add(40);
                 break;
             case 41:

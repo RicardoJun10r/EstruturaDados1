@@ -14,21 +14,25 @@ public class QuestaoQuarentaResposta {
 
     private String textoOutput = "";
 
-    public QuestaoQuarentaResposta(){}
+    public QuestaoQuarentaResposta(String frase) throws IOException{
+        this.setPathCriptografar();
+        this.setPathDescriptografar();
+        this.executar(frase);
+    }
 
-    public void executar(String frase) throws IOException{
+    private void executar(String frase) throws IOException{
         this.arquivoTexto = new ArquivoTexto();
 
         System.out.println("Criptografando...");
         try {
-            arquivoTexto.escritor(PATH_CRIPTOGRAFAR, criptografar(frase));
+            arquivoTexto.escritor(this.PATH_CRIPTOGRAFAR, criptografar(frase));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         System.out.println("Lendo arquivo criptografado");
         try {
-			this.textoOutput = this.arquivoTexto.leitor(PATH_CRIPTOGRAFAR);
+			this.textoOutput = this.arquivoTexto.leitor(this.PATH_CRIPTOGRAFAR);
 			System.out.print(textoOutput);
 		} catch (IOException e) {
 			System.out.println("Erro na leitura");
@@ -40,14 +44,14 @@ public class QuestaoQuarentaResposta {
 
         System.out.println("Descriptografando...");
         try {
-            arquivoTexto.escritor(PATH_DESCRIPTOGRAFAR, descriptografar(this.textoOutput));
+            arquivoTexto.escritor(this.PATH_DESCRIPTOGRAFAR, descriptografar(this.textoOutput));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         System.out.println("Lendo arquivo descriptografado");
         try {
-			this.textoOutput = this.arquivoTexto.leitor(PATH_DESCRIPTOGRAFAR);
+			this.textoOutput = this.arquivoTexto.leitor(this.PATH_DESCRIPTOGRAFAR);
 			System.out.print(textoOutput);
 		} catch (IOException e) {
 			System.out.println("Erro na leitura");
@@ -58,25 +62,14 @@ public class QuestaoQuarentaResposta {
 		}
     }
 
-    public void setPathCriptografar(String path){
+    private void setPathCriptografar(){
         
-        if(path == null){
-            this.PATH_CRIPTOGRAFAR = "ListaUmED1/src/temp/zenit.txt";
-        }
-
-        if(!path.isEmpty()){
-            this.PATH_CRIPTOGRAFAR = path + "/zenit.txt";
-        }
+        this.PATH_CRIPTOGRAFAR = "ListaUmED1/src/temp/zenit.txt";
     }
 
-    public void setPathDescriptografar(String path){
+    private void setPathDescriptografar(){
         
-        if(path == null){
-            this.PATH_CRIPTOGRAFAR = "ListaUmED1/src/temp/polar.txt";
-        }
-        if(!path.isEmpty()){
-            this.PATH_DESCRIPTOGRAFAR = path + "/polar.txt";
-        }
+        this.PATH_DESCRIPTOGRAFAR = "ListaUmED1/src/temp/polar.txt";
     }
 
     private String criptografar(String texto)

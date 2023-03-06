@@ -9,11 +9,12 @@ public class QuestaoTrintaCincoResposta {
 
     private String PATH;
     
-    public QuestaoTrintaCincoResposta() throws IOException {
-        
+    public QuestaoTrintaCincoResposta(String frase) throws IOException {
+        this.setPath();
+        this.executar(frase);
     }
 
-    public void executar(String frase) throws IOException{
+    private void executar(String frase) throws IOException{
         QuestaoTrintaQuatroResposta questaoTrintaQuatroResposta = new QuestaoTrintaQuatroResposta(frase);
         System.out.println("Escrevendo arquivo...");
         this.escreverArquivo(this.PATH, questaoTrintaQuatroResposta.getResultado());
@@ -21,15 +22,9 @@ public class QuestaoTrintaCincoResposta {
         this.lerArquivo(this.PATH);
     }
 
-    public void setPath(String path)
+    private void setPath()
     {
-        if(path == null){
-            this.PATH = "ListaUmED1/src/temp/questaoTrintaCinco.csv";
-        }
-
-        if(!path.isEmpty()){
-            this.PATH = path + "/questaoTrintaCinco.csv";
-        }
+        this.PATH = "ListaUmED1/src/temp/questaoTrintaCinco.csv";
     }
 
     private void escreverArquivo(String path, String texto) throws IOException{
