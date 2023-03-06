@@ -58,7 +58,6 @@ public class Principal {
 
     private static List<Integer> historicoQuestoes = new ArrayList<>();
 
-    private static String PATH;
     public static void main(String[] args) throws IOException {
 
         // Para utilizar basta escrever o número da questão e responder do que se pede para ver a resolução da questão
